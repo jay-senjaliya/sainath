@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300;400;500;600;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Nunito:wght@200;300;400;500;600;700;800;900;1000&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+body {
+    /* background-color: antiquewhite; */
+    /* font-family: 'Roboto', sans-serif; */
+    /* font-family: 'Montserrat', sans-serif; */
+    font-family: 'Nunito', sans;
+}
+
+/* Custom scrollbar for WebKit browsers (Chrome, Safari) */
+body::-webkit-scrollbar {
+    width: 5px; /* Width of the scrollbar */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #f58434; /* Color of the scrollbar thumb */
+    border-radius: 4px; 
+  }
+  
+  body::-webkit-scrollbar-thumb:hover {
+    background-color: #F58634; /* Color of the thumb on hover */
+  }
+  
+  body::-webkit-scrollbar-track {
+    background-color: #5D3830; /* Color of the scrollbar track */
+  }

@@ -1,0 +1,20 @@
+
+/*** Service ***/
+.service-item {
+    box-shadow: 0 0 45px rgba(0, 0, 0, .08);
+    transition: .5s;
+}
+
+.service-item:hover {
+    background: #F58634;
+    /* color: #fff !important; */
+}
+
+
+.service-item * {
+    transition: .1s;
+}
+
+.service-item:hover * {
+    color: #fff !important;
+}

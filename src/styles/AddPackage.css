@@ -1,0 +1,36 @@
+.form-control:focus, .form-select:focus{
+    outline: none;
+    box-shadow: none;
+    /* border: none; */
+}
+
+.form-control, .form-select{
+    border: 1px solid #cacaca;
+    border-radius: 0;
+}
+
+.add-btn {
+    box-shadow: none;
+    border: none;
+    color: #fff;
+    border-radius: 0;
+    background-color: #F58634;
+}
+
+.add-btn:hover {
+    color: #fff;
+    background-color: #F58634;
+}
+
+.submit-btn {
+    background-color: #F58634;
+    color: #ffffff;
+    margin-bottom: 20px;
+    border: none;
+    box-shadow: none;
+}
+
+.submit-btn:hover {
+    background-color: #c55a0e;
+    color: #ffffff;
+}

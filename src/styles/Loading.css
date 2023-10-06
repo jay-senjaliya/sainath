@@ -1,0 +1,81 @@
+/* Add your CSS styles for the loader component here */
+
+.loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-align: center;
+    margin-top: 110;
+    display: flex;
+    justify-content: center;
+    background-color: #f1f2f361;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    z-index: 9999;
+  }
+  @keyframes ldio-476mokzquiv {
+    0% {
+      top: 96px;
+      left: 96px;
+      width: 0;
+      height: 0;
+      opacity: 1;
+    }
+    100% {
+      top: 18px;
+      left: 18px;
+      width: 156px;
+      height: 156px;
+      opacity: 0;
+    }
+  }.ldio-476mokzquiv div {
+    position: absolute;
+    border-width: 8px;
+    border-style: solid;
+    opacity: 1;
+    border-radius: 50%;
+    animation: ldio-476mokzquiv 1s cubic-bezier(0,0.2,0.8,1) infinite;
+  }.ldio-476mokzquiv div:nth-child(1) {
+    border-color: #5d3830;
+    animation-delay: 0s;
+  }
+  .ldio-476mokzquiv div:nth-child(2) {
+    border-color: #ff7006;
+    animation-delay: -0.5s;
+  }
+  .loadingio-spinner-ripple-2a7clapf2t2 {
+    width: 200px;
+    height: 200px;
+    display: inline-block;
+    overflow: hidden;
+    /* background: #f1f2f3; */
+  }
+  .ldio-476mokzquiv {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform: translateZ(0) scale(1);
+    backface-visibility: hidden;
+    transform-origin: 0 0; /* see note above */
+  }
+  .ldio-476mokzquiv div { box-sizing: content-box; }
+  
+  /* .loader {
+    border: 8px solid #f3f3f3; 
+    border-top: 8px solid #F58634; 
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 2s linear infinite; 
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  } */
+
+  
+  
+  
+  

@@ -1,0 +1,21 @@
+.home-modal-content.modal-content{
+    background-color: #5D3830;
+    border-radius: 0px;
+    color: #fff;
+    max-height: 80vh;
+    overflow-y:auto;
+    overflow-x: hidden;
+}
+
+.home-modal.modal-body {
+    padding: 0px !important;
+    position: relative;
+}
+
+.home-modal-close{
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}

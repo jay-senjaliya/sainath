@@ -1,0 +1,42 @@
+/*** Section Title ***/
+.section-title {
+    /* background-color: transparent; */
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    color: #F58634;
+    font-family: 'Nunito', sans-serif;
+    /* z-index: 99; */
+  }
+  
+  .section-title::before {
+    position: absolute;
+    content: "";
+    width: calc(100% + 80px);
+    height: 2px;
+    top: 4px;
+    left: -40px;
+    background: #F58634;
+    z-index: -1;
+  }
+  
+  .section-title::after {
+    position: absolute;
+    content: "";
+    width: calc(100% + 120px);
+    height: 2px;
+    bottom: 5px;
+    left: -60px;
+    background: #F58634;
+    z-index: -1;
+  }
+  
+  .section-title.text-start::before {
+    width: calc(100% + 40px);
+    left: 0;
+  }
+  
+  .section-title.text-start::after {
+    width: calc(100% + 60px);
+    left: 0;
+  }

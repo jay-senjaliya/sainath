@@ -1,0 +1,12 @@
+/* Custom CSS to change the color of the toast message */
+.toast-custom {
+    background-color: #007bff; /* Change the background color */
+    color: #fff; /* Change the text color */
+  }
+  
+  /* Optionally, you can customize other styles, such as border-radius and padding */
+  .toast-custom {
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px; /* Padding around the toast content */
+  }
+  
