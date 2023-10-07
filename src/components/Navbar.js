@@ -140,7 +140,7 @@ const Navbar = () => {
                 >
                   {domesticDestinations?.map((des, i) => {
                     return (
-                      <li className="p-1">
+                      <li className="p-1" key={i}>
                         <Link
                           style={{
                             textDecoration: 'none',
@@ -201,7 +201,7 @@ const Navbar = () => {
                 >
                   {internationalDestinations?.map((des, i) => {
                     return (
-                      <li className="p-1">
+                      <li className="p-1" key={i}>
                         <Link
                           style={{
                             textDecoration: 'none',

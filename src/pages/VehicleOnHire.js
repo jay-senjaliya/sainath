@@ -15,11 +15,11 @@ const VehicleOnHire = () => {
 
   useEffect(() => {
     updateVehicleData();
-    const categoryVehicle = [
-      ...new Set(vehicleData.map((item) => item.category)),
-    ];
-    setCategory(categoryVehicle);
-    console.log(category);
+    // const categoryVehicle = [
+    //   ...new Set(vehicleData.map((item) => item.category)),
+    // ];
+    // setCategory(categoryVehicle);
+    // console.log(category);
   }, []);
 
   const handleScroll = (id) => {
@@ -35,7 +35,15 @@ const VehicleOnHire = () => {
   return (
     <div className="vehicle-on-hire-page">
       <div className="vehicle-on-hire-page-header">
-        <OwlCarousel items={1} dots={false} autoPlay={true} navigation={true}>
+        <OwlCarousel
+          items={1}
+          dots={false}
+          autoPlay={true}
+          navigation={true}
+          autoplay={true}
+          autoplayTimeout={4000}
+          autoplayHoverPause={true}
+        >
           <div className="banner">
             <img
               className="banner-img"
@@ -81,13 +89,17 @@ const VehicleOnHire = () => {
             <div className="vehicle-category-left">
               <h3>vehicle category</h3>
               <ul>
-                {category?.map((item, i) => {
-                  return (
-                    <li className="text-capitalize" key={i}>
-                      <Link onClick={() => handleScroll(item)}>{item}</Link>
-                    </li>
-                  );
-                })}
+                <li className="text-capitalize">
+                  <Link onClick={() => handleScroll('bus')}>Bus</Link>
+                </li>
+                <li className="text-capitalize">
+                  <Link onClick={() => handleScroll('traveller')}>
+                    Traveller
+                  </Link>
+                </li>
+                <li className="text-capitalize">
+                  <Link onClick={() => handleScroll('cab')}>Cab</Link>
+                </li>
               </ul>
             </div>
           </div>

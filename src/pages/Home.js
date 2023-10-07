@@ -6,14 +6,24 @@ import { usePackageContext } from '../context/PackageContext';
 import Subscribe from '../components/Subscribe';
 import SectionTitle from '../components/SectionTitle';
 import Testimonial from '../components/Testimonial';
+import FixedDepartureCard from '../components/FixedDepartureCard';
 
 const Home = () => {
   const context = usePackageContext();
-  const { destinationData, hotelData } = context;
+  const {
+    destinationData,
+    hotelData,
+    fixedDepartureData,
+    updateFixedDepartureData,
+  } = context;
   const [domesticDestinations, setDomesticDestinations] = useState([]);
   const [internationalDestinations, setInternationalDestinations] = useState(
     []
   );
+
+  useEffect(() => {
+    updateFixedDepartureData();
+  }, []);
 
   useEffect(() => {
     setDomesticDestinations(
@@ -98,12 +108,34 @@ const Home = () => {
             </div>
           </div>
         </section>
+
         <div
           className="container-xxl"
           style={{
             width: '100%',
           }}
         >
+          <div className="fixed-departure-home">
+            <div
+              className="text-center wow fadeInUp mt-4"
+              data-wow-delay="0.1s"
+            >
+              <SectionTitle
+                mainTitle="Trending"
+                description="Fixed Departure"
+              />
+            </div>
+            <div className="row  g-3 p-3 ">
+              {fixedDepartureData?.map((fixedDeparture, index) => {
+                return (
+                  <FixedDepartureCard
+                    key={index}
+                    fixedDeparture={fixedDeparture}
+                  />
+                );
+              })}
+            </div>
+          </div>
           <div className="domestic-packages-home">
             <div
               className="text-center wow fadeInUp mt-4"

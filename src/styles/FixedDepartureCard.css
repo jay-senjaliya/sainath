@@ -1,0 +1,92 @@
+.fixed-departure-item {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: .5s;
+}
+
+.fixed-departure-card-img img {
+width: 100%;
+height: 250px;
+object-fit: cover;
+transition: .5s ease-in-out;
+filter: brightness(90%);
+}
+
+.fixed-departure-card-img{
+    overflow: hidden;
+}
+
+
+.fixed-departure-card-img img:hover{
+    transform: scale(1.1);
+    /* filter: brightness(120%); */
+}   
+
+
+ .fixed-departure-card-main p{
+    font-size: 16px;
+    text-align: center;
+    line-height: 27px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.fixed-departure-card-footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ .fixed-departure-card-footer a {
+    width: 120px;
+    height: 30px;
+    padding: 8px;
+    font-size: 12px;
+    line-height: 12px;
+    font-weight: 600;
+    background-color: #F58634;
+    color: #ffffff;
+    border-radius: 100px;
+    margin-bottom: 10px; 
+}
+
+ .fixed-departure-card-footer a:hover{
+    color: #F58634;
+    background-color: #ffffff;
+    outline: 1px solid #F58634;
+}
+
+.fixed-departure-days {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    color: #fff;
+    font-weight: 700;
+}
+.fixed-departure-nights {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    color: #fff;
+    font-weight: 700;
+}
+
+.fixed-departure-name {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    font-weight: 700;
+}
+
+.fixed-departure-price {
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    color: #fff;
+    font-weight: 700;
+}

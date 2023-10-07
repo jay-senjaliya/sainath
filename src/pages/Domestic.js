@@ -20,7 +20,15 @@ const Domestic = () => {
   return (
     <div className="domestic-packages">
       <div className="domestic-page-header">
-        <OwlCarousel items={1} dots={false} autoPlay={true} navigation={true}>
+        <OwlCarousel
+          items={1}
+          dots={false}
+          autoPlay={true}
+          navigation={true}
+          autoplay={true}
+          autoplayTimeout={4000}
+          autoplayHoverPause={true}
+        >
           <div className="banner">
             <img
               className="banner-img"

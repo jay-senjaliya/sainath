@@ -106,7 +106,15 @@ const PackageDetail = () => {
                 <tr>
                   {Package?.price?.map((el, i) => {
                     return (
-                      <th scope="col" key={i}>
+                      <th
+                        scope="col"
+                        key={i}
+                        style={
+                          el.heading === 'Booking & Validity'
+                            ? { minWdth: 200 }
+                            : {}
+                        }
+                      >
                         {el.heading}
                       </th>
                     );

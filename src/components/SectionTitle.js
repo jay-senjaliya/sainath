@@ -15,7 +15,7 @@ const SectionTitle = ({ mainTitle, description }) => {
         {mainTitle}
       </h6>
       <h1
-        className="mb-5"
+        className="mb-3"
         style={{
           color: '#5D3830',
           fontFamily: "'Nunito', sans-serif",

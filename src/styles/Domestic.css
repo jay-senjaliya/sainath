@@ -123,8 +123,9 @@
 }
 
 @media (max-width: 480px) {
-    .banner-content h1 {
-        font-size: 4vh;
+    .header-content h1 {
+        font-size: 31px;
+        line-height: 34px;
     }
     .banner-content p {
         font-size: 2vh;

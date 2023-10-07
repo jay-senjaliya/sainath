@@ -21,7 +21,15 @@ const International = () => {
   return (
     <div className="international-packages">
       <div className="international-page-header">
-        <OwlCarousel items={1} dots={false} autoPlay={true} navigation={true}>
+        <OwlCarousel
+          items={1}
+          dots={false}
+          autoPlay={true}
+          navigation={true}
+          autoplay={true}
+          autoplayTimeout={4000}
+          autoplayHoverPause={true}
+        >
           <div className="banner">
             <img
               className="banner-img"
@@ -57,6 +65,18 @@ const International = () => {
           </h1>
         </div>
       </div>
+      {/* <div className="contact-us-header">
+        <img
+          className="contact-img"
+          src={require('./../img/kashmir-2.jpg')}
+          alt="contact us banner"
+        />
+        <div className="header-content">
+          <h1 style={{ fontWeight: 900 }}>
+            International <span>Packages</span>
+          </h1>
+        </div>
+      </div> */}
       <Breadcrumb list={[{ key: 'Home', value: '/' }]} last="International " />
       <div className="container-xxl">
         <div className="row g-3 p-3">

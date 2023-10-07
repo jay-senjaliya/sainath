@@ -137,3 +137,9 @@
     top: 8px;
     background-color: #5D3830;
   }
+
+  @media (max-width: 991px) {
+    .navbar-nav .nav-link {
+      padding: 10px 0;
+    }
+  }
