@@ -1,11 +1,14 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './../styles/Navbar.css';
 import logo from './../img/sainath-logo-removebg-preview.png';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { usePackageContext } from '../context/PackageContext';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Navbar = () => {
   const navRef = useRef(null);
+  const navigate = useNavigate();
   const location = useLocation();
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [scrolling, setScrolling] = useState(false);
@@ -16,7 +19,7 @@ const Navbar = () => {
   const [openDomesticMenu, setOpenDomesticMenu] = useState(false);
   const [openInternationalMenu, setOpenInternationalMenu] = useState(false);
   const context = usePackageContext();
-  const { destinationData } = context;
+  const { destinationData, logged, setLogged } = context;
 
   useEffect(() => {
     setDomesticDestinations(
@@ -83,7 +86,7 @@ const Navbar = () => {
         </button>
 
         <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav align-items-lg-center ms-auto me-lg-5">
+          <ul className="navbar-nav align-items-lg-center ms-auto me-lg-3">
             {/* <li className="nav-item">
                                 <Link className={`nav-link ${location.pathname === "/" ? "active" : ""}`} to="/">Home</Link>
                             </li> */}
@@ -275,7 +278,51 @@ const Navbar = () => {
                 CONTACT
               </Link>
             </li>
+
+            {logged && (
+              <li className="nav-item">
+                <Link
+                  className={`nav-link ${
+                    location.pathname === '/admin' ? 'active' : ''
+                  }`}
+                  data-toggle="collapse"
+                  data-target=".navbar-collapse.show"
+                  onClick={() => setIsCollapsed(false)}
+                  to="/admin"
+                >
+                  ADMIN
+                </Link>
+              </li>
+            )}
           </ul>
+
+          {!logged && (
+            <div
+              className="btn-danger btn"
+              style={{ backgroundColor: '#F58634', border: 'none' }}
+              onClick={() => navigate('/login')}
+            >
+              {' '}
+              Login{' '}
+            </div>
+          )}
+
+          {logged && (
+            <div
+              className="btn-danger btn"
+              style={{ backgroundColor: '#F58634', border: 'none' }}
+              onClick={() => {
+                setLogged(false);
+                toast.success('logged out successfully!', {
+                  position: 'bottom-right',
+                });
+                navigate('/login');
+              }}
+            >
+              {' '}
+              Logout{' '}
+            </div>
+          )}
 
           {/* <button className="btn custom-btn d-lg-block">VEHICLE ON HIRE</button> */}
         </div>

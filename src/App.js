@@ -30,6 +30,8 @@ import PrivacyPolicy from './pages/PrivacyPolicy';
 import ContactEnquiryList from './pages/ContactEnquiryList';
 import AddFixedDeparture from './pages/AddFixedDeparture';
 import FixedDepartureList from './pages/FixedDepartureList';
+import Admin from './pages/Admin';
+import Login from './pages/Login';
 
 const App = () => {
   const [modalClick, setModalClick] = useState(false);
@@ -53,6 +55,8 @@ const App = () => {
             {/* <div> */}
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/admin" element={<Admin />} />
+              <Route path="/login" element={<Login />} />
               <Route path="/domestic" element={<Domestic />} />
               <Route path="/international" element={<International />} />
               <Route path="/hotel" element={<Hotel />} />

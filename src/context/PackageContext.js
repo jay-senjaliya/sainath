@@ -18,6 +18,7 @@ const initialState = {
   bookNow: false,
   enquiryNow: false,
   loading: false,
+  logged: false,
 
   // setBookNow: () => {},
   updatePackageData: () => {},
@@ -29,6 +30,7 @@ const initialState = {
   openBookNow: () => {},
   closeBookNow: () => {},
   setLoading: () => {},
+  setLogged: () => {},
 };
 
 export const PackageContext = createContext(initialState);
@@ -43,6 +45,7 @@ export const PackageWrapper = ({ children }) => {
   const [bookNow, setBookNow] = useState(false);
   const [enquiryNow, setEnquiryNow] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [logged, setLogged] = useState(false);
 
   useEffect(() => {
     packageService
@@ -185,6 +188,7 @@ export const PackageWrapper = ({ children }) => {
     bookNow,
     enquiryNow,
     loading,
+    logged,
     updatePackageData,
     updateDestinationData,
     updateHotelData,
@@ -196,6 +200,7 @@ export const PackageWrapper = ({ children }) => {
     closeEnquiryNow,
     openEnquiryNow,
     setLoading,
+    setLogged,
   };
   return (
     <PackageContext.Provider value={value}>{children}</PackageContext.Provider>
